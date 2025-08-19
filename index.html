@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Prevent FOUC - hide content until loaded */
-        body { opacity: 1; transition: opacity 0.3s ease; }
+        body { opacity: 0; transition: opacity 0.3s ease; }
         body.loaded { opacity: 1; }
     </style>
 </head>
@@ -193,7 +193,7 @@
                     </div>
                     <div class="form-group">
                         <select name="service" required>
-                            <option value="">Select Interest</option>
+                            <option value="">Select Service Interest</option>
                             <option value="products">Product List</option>
                             <option value="contractor">Independent Contractor Opportunities</option>
                         </select>
