@@ -485,6 +485,11 @@ p {
     color: #4CAF50;
 }
 
+.footer-section p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
 .footer-logo {
     display: flex;
     align-items: center;
@@ -508,7 +513,7 @@ p {
 }
 
 .footer-section ul li a {
-    color: #ccc;
+    color: #e0e0e0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -544,7 +549,8 @@ p {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #4CAF50;
-    color: #ccc;
+    color: white;
+    font-weight: 500;
 }
 
 /* Responsive Design */
