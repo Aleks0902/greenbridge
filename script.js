@@ -312,8 +312,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('load', function() {
         document.body.classList.remove('loading');
+        // Show page after everything loads to prevent glitching
+        document.body.classList.add('loaded');
     });
     
     // Initialize any other components here
     console.log('Greenbridge Agriculture Brokerage Co website loaded successfully!');
+});
+
+// Immediate show for faster perceived loading
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
 });
