@@ -1,4 +1,5 @@
 const sgMail = require('@sendgrid/mail');
+const PDFDocument = require('pdfkit');
 
 exports.handler = async (event, context) => {
     if (event.httpMethod !== 'POST') {
@@ -19,6 +20,9 @@ exports.handler = async (event, context) => {
 
         // Set SendGrid API key
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+        // Create PDF document
+        const pdfBuffer = await createContractorPDF(formData.name);
 
         // Create contractor briefing email
         const msg = {

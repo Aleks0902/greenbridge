@@ -89,6 +89,10 @@ if (contactForm) {
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
+        
+        // Get form data for contractor check
+        const formData = new FormData(this);
+        const service = formData.get("service");
         submitBtn.disabled = true;
 
         // Simulate form submission (replace with actual form handling)
