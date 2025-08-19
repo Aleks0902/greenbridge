@@ -639,3 +639,25 @@ html {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* Professional Bridge Logo Styling */
+.bridge-logo {
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bridge-icon {
+    width: 32px;
+    height: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover .bridge-icon {
+    transform: scale(1.05);
+}
+
+.bridge-icon path,
+.bridge-icon rect,
+.bridge-icon line {
+    transition: all 0.3s ease;
+}
