@@ -609,3 +609,137 @@ html {
 .bridge-icon line {
     transition: all 0.3s ease;
 }
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Fix container and layout issues */
+    .container {
+        padding: 0 15px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Fix hero section on mobile */
+    .hero {
+        padding: 0 15px !important;
+        min-height: 100vh !important;
+    }
+    
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        text-align: center !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Fix button layout */
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+    }
+    
+    .btn {
+        width: 250px !important;
+        padding: 15px 20px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Fix navigation */
+    .nav-logo {
+        font-size: 1.2rem !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .nav-logo span {
+        font-size: 1rem !important;
+    }
+    
+    /* Fix sections */
+    .about, .services, .markets, .contact {
+        padding: 3rem 0 !important;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .services-grid,
+    .markets-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Fix service cards */
+    .service-card {
+        padding: 2rem 1.5rem !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix contact form */
+    .contact-form {
+        padding: 2rem 1.5rem !important;
+        margin: 0 !important;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 15px !important;
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        border-radius: 8px !important;
+    }
+    
+    /* Fix footer */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .footer-section {
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    
+    .btn {
+        width: 200px !important;
+        padding: 12px 15px !important;
+    }
+    
+    .nav-logo span {
+        font-size: 0.9rem !important;
+    }
+    
+    .service-card,
+    .contact-form {
+        padding: 1.5rem 1rem !important;
+    }
+}
