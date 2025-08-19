@@ -101,6 +101,20 @@ if (contactForm) {
             showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
             
             // Reset form
+            
+            // Check if contractor inquiry and send auto-response
+            const service = new FormData(this).get("service");
+            if (service === "contractor") {
+                console.log("Triggering contractor auto-response");
+                fetch("/.netlify/functions/send-contractor-email", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                .then(response => response.json())
+                .then(data => console.log("Auto-response result:", data))
+                .catch(error => console.error("Auto-response error:", error));
+            }
             this.reset();
             
             // Reset button
